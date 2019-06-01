@@ -1,1 +1,1 @@
-COOL
+npm start to run the script
