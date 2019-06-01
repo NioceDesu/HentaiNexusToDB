@@ -10,13 +10,23 @@ var https = require('https');
 http.globalAgent.maxSockets = 2;
 https.globalAgent.maxSockets = 2;
 //
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+readline.question(`Start ?[Y/N]`, (resp) => {
+	if(resp == 'Y')
+		getData(1);
+  readline.close()
+})
+//
 const urlString = "https://hentainexus.com";
 //
 var str = "/view/5700";
 str.search()
 // console.log(str.split("/view/").pop());
 //
-getData(1);
+//getData(1);
 //
 async function getData(currentPage) {
     db.serialize(function () {
