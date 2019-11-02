@@ -523,6 +523,7 @@ async function nhentaiDownloader(data) {
 async function saveThumb(){
     const query = 'SELECT id,Cover FROM Hentai ORDER BY id ASC';
     const outputPath = path.join(__dirname,'thumbs');
+	fs.ensureDir(outputPath);
     const outputFolder = await fs.readdir(outputPath);
 
     db.all(query, [], (err, row) => {
