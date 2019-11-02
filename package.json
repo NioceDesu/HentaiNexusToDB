@@ -4,13 +4,17 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+	"test" : "node main-alpha.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "download": "^7.1.0",
     "fs-extra": "^8.0.1",
+    "inquirer": "^6.3.1",
+    "progress": "^2.0.3",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sqlite3": "^4.0.8"
